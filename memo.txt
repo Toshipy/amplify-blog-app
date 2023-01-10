@@ -1,4 +1,25 @@
 #カレントディレクトリにプロジェクト作成
-npx create-next-app . amplify-blog-app --ts --tailwindcss --eslint --tailwindcss 
+$ npx create-next-app . amplify-blog-app --ts --tailwindcss --eslint --tailwindcss
 
-#
+#amplify をインストール
+$ npm install aws-amplify @aws-amplify/ui-react
+
+#amplify cliを使って amplify init (amplify バックエンド環境の初期化をする)
+$ amplify init
+
+#APIを作成
+$ amplify add api
+
+#APIを編集
+
+schema.graphql を編集する
+
+##ローカルの状態をAWSに反映させる
+まず環境を作る
+$ amplify add env
+
+途中でGraphQL APIを操作するコードを生成するか、言語は何にするか(JavaScript, TypeScript, flow)を聞かれます。
+$ amplify push
+
+$ amplify console api
+

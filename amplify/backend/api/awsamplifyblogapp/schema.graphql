@@ -1,0 +1,11 @@
+
+#セカンダリーインデックスを指定したい項目に@indexをつける。queryFieldを使うことでセカンダリインデックスを使ったクエリでの検索が可能
+type Post @model {
+  id: ID!
+  title: String!
+  content: String!
+  username: String @index(name: "postsByUsername", queryField: "postsByUsername") 
+  coverImage: String
+  # createdAt: 
+  # updatedAt: 
+}
