@@ -1,0 +1,4 @@
+#カレントディレクトリにプロジェクト作成
+npx create-next-app . amplify-blog-app --ts --tailwindcss --eslint --tailwindcss 
+
+#
